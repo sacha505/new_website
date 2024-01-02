@@ -1,16 +1,17 @@
-body {
+html { 
+    overflow-y: scroll; overflow-x:hidden; 
+    overflow-x:hidden; 
+ }
+
+ body {
     background-color: #1d1c1f;
+    overflow: scroll;
  }
 
 h1 {
     color: white;
     font-family: 'Inconsolata', monospace;
     
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -350px;
-    margin-left: -200px;
   }
 
 h2 {
@@ -26,32 +27,36 @@ h3 {
 p {
     color: white;
     font-family: 'Inconsolata', monospace;
-
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -300px;
-    margin-left: -200px;
   }
+
+.description {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35em;
+  }
+
+.description_h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35em;
+    padding-top: 75px;
+}
 
 .container {
     display: flex;
     justify-content: center;
-    
+    height: 10em;
+    display: flex;
+    align-items: center 
   }
 
 .nav {
     color: white;
     font-family: 'Inconsolata', monospace;
-    display: flex;
-    justify-content: right;
-    
-    position: fixed;
-    top: 50%;
-    left: 85%;
-    margin-top: -350px;
-    margin-left: -200px;
-    
+    position: relative;
+    left: 70%;
+    margin-top: -115px;
+
     /* Remove bullets from list */  
     ul {
         list-style-type: none;
@@ -85,10 +90,26 @@ a:active {
 .list{
     color: white;
     font-family: 'Inconsolata', monospace;
+    display: flex;
+    height: 15em;
+    width: 350em;
+    align-items: center; 
 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -250px;
-    margin-left: -200px;
+}
+
+codeblock {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
 }
