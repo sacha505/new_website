@@ -89,7 +89,8 @@ a:active {
     justify-content: center;
     height: 10em;
     display: flex;
-    align-items: center 
+    align-items: center;
+     
   }
 
 .description {

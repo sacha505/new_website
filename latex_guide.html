@@ -12,8 +12,8 @@
 
 <div class="container">
     <div class="description">
-        <h1>LaTeX for Computer Science Papers</h1>
-        <p>LaTeX looks pretty but can sometimes be confusing. <br> Below are the solutions I found to some common problems.</p>
+        <h1>LaTeX for Computer Science</h1>
+        <p>LaTeX looks pretty but can sometimes be confusing. <br> Below are the solutions I found to some common problems all in one place for convenience.</p>
     </div>
 </div>
 
@@ -40,7 +40,6 @@
         <li><a href="latex_guide.html">Adding Code Snippets</a></li>
         <li><a href="latex_guide.html">Lists and Sublists</a></li>
         <li><a href="latex_guide.html">Headers and Footers</a></li>
-        <li><a href="latex_guide.html">Formulas</a></li>
         <li><a href="latex_guide.html">Escape Characters</a></li>
 
     </ul> 
@@ -48,43 +47,101 @@
 </div>
 
 <h2>Compile a Document</h2>
-    <p>pdflatex is my compliler of choice
         <h3>Single .tex file:</h3>
-
-        <h3>Multiple .tex files:</h3>
-
+        <div class="codeblock">
+            pdflatex document.tex
+        </div> 
+        <p>Alternatively, you can use something online like Overleaf.
 
 <h2>Include Packages</h2>
-    <p>All packages need to be included before the \begindocument command</p>
+    <p>All packages should to be included before the \begindocument command</p>
+    <div class="codeblock">
+        \documentclass[12pt, letterpaper]{report} <br> 
+        \usepackage <br> 
+        \title{Your Title} <br> 
+        \begin{document} <br> 
+        \end{document}
+    </div>    
 
 <h2>Create a Contents Page</h2>
+<p>This is fairly simple:</p>
 
+    <div class="codeblock">
+        \tableofcontents
+    </div> 
 
 <h2>Add a Bibliography</h2>
+<p>The most organized way to do this is to use BibTex. You can manage your bibliography manually but it's a pain. </p>
+<p>You'll need to make a .bib file which will contain the each reference in your paper. You need to make sure these are accurate. <br>
+Each individual reference will look something like this: </p>
+
+<div class="codeblock">
+    @online{website,
+        author = "Jane Doe",  <br> 
+        title = "My Book",  <br> 
+        url  = "https://www.wikipedia.org/",  <br> 
+        addendum = "(accessed: 01.01.2010)",  <br> 
+        keywords = "latex, books, guides"
+        }
+</div> 
 
 
 <h2>Adding and Positioning Images</h2>
 
-<h3>Adding</h3>
-    <p>To add an image, it needs to be in a known directory to the interpreter.</p>
+    <p>To add an image, it needs to be in a known directory to the interpreter. One common mistake is not to have included the right file path.</p>
 
-<h3>Positioning</h3>
-    <p>The easiest way to position images is by using the float package: </p>
+    <p>The easiest way to position images is by using float, represented here with the [H]: </p>
+    <div class="codeblock">
+        \begin{figure}[H] <br> 
+        \centering <br> 
+        \includegraphics[width=0.5\linewidth]{pathtoyour/file/image.png} <br> 
+        \caption{your caption here} <br> 
+        \end{figure}
+    </div>
+
+<p>Float tells LaTeX to put your image in the same place it appears in the code. You can also see here there is a width modifier which you can use to resize your image.</p>
 
 
 <h2>Adding Code Snippets</h2>
-
+<p>The \lstset environment lets us write example code </p>
+    <div class="codeblock">
+        \usepackage{listings} <br> 
+        \begin{lstlisting}[language=C] <br> 
+            %your code here <br> 
+        \end{lstlisting}
+    </div> 
 
 <h2>Lists and Sublists</h2>
+<p>Plenty of ways to make lists in LaTeX, and you can nest lists inside of lists.</p>
+<div class="codeblock">
+    \begin {itemize} <br>
+        <tab>\begin {itemize}</tab> <br>
+        <tab><tab>\begin {itemize}</tab></tab> <br>
+        <tab><tab>\end {itemize}</tab></tab> <br>
+        <tab>\end {itemize}</tab> <br>
+    \end {itemize}
+    
+</div> 
 
 
 <h2>Headers and Footers</h2>
-
-
-<h2>Formulas</h2>
+<h3>Header</h3>    
+    <div class="codeblock">
+        \lhead{Left Header} <br> 
+        \rhead{Right Header}
+    </div> 
+<h3>Footer</h3>
+    <div class="codeblock">
+        \lfoot{Left Footer}  <br> 
+        \rfoot{Right Footer}
+    </div> 
 
 
 <h2>Escape Characters</h2>
+<p>Some characters are considered 'special' in LaTeX so won't render if you type them without an escape character, which is '\'.</p>
+    <div class="codeblock">
+        \%
+    </div> 
 
 </div>
 
