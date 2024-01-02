@@ -1,9 +1,13 @@
 html { 
     overflow-y: scroll; overflow-x:hidden; 
-    overflow-x:hidden;
-    width:100%; 
-    margin:0;
+    overflow-x:hidden; 
+    margin:0; 
+    min-height: 100vh;
  }
+
+* {
+    box-sizing: border-box
+  }
 
  body {
     background-color: #1d1c1f;
@@ -13,6 +17,7 @@ html {
 h1 {
     color: white;
     font-family: 'Inconsolata', monospace;
+    
   }
 
 h2 {
@@ -30,33 +35,15 @@ p {
     font-family: 'Inconsolata', monospace;
   }
 
-.description {
-    margin-left: auto;
-    margin-right: auto;
-    width: 35em;
-  }
-
-.description_h2 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 35em;
-    padding-top: 75px;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    height: 10em;
-    display: flex;
-    align-items: center 
-  }
 
 .nav {
     color: white;
     font-family: 'Inconsolata', monospace;
+    position: relative;
     right: 500px;
-    position: absolute;
     margin-top: -115px;
+    position: absolute;
+
 
     /* Remove bullets from list */  
     ul {
@@ -97,19 +84,17 @@ a:active {
 
 }
 
-codeblock {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
-    border-left: 3px solid #f36d33;
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;
-}
+.container {
+    display: flex;
+    justify-content: center;
+    height: 10em;
+    display: flex;
+    align-items: center 
+  }
+
+.description {
+    margin-left: auto;
+    margin-right: auto;
+    width: 35em;
+    
+  }
