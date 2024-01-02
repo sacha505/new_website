@@ -18,6 +18,11 @@ h2 {
     font-family: 'Inconsolata', monospace;
   }
 
+h3 {
+    color: white;
+    font-family: 'Inconsolata', monospace;
+  }
+
 p {
     color: white;
     font-family: 'Inconsolata', monospace;
