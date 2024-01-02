@@ -5,6 +5,12 @@ body {
 h1 {
     color: white;
     font-family: 'Inconsolata', monospace;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -200px;
   }
 
 h2 {
@@ -15,11 +21,18 @@ h2 {
 p {
     color: white;
     font-family: 'Inconsolata', monospace;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -200px;
   }
 
 .container {
     display: flex;
     justify-content: center;
+    
   }
 
 .nav {
@@ -27,7 +40,12 @@ p {
     font-family: 'Inconsolata', monospace;
     display: flex;
     justify-content: right;
-    width: 1500px;
+    
+    position: fixed;
+    top: 50%;
+    left: 85%;
+    margin-top: -350px;
+    margin-left: -200px;
     
     /* Remove bullets from list */  
     ul {
@@ -62,4 +80,10 @@ a:active {
 .list{
     color: white;
     font-family: 'Inconsolata', monospace;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -200px;
 }
