@@ -84,7 +84,9 @@ Each individual reference will look something like this: </p>
         keywords = "latex, books, guides"}
 </div> 
 
-<h3>Anatomy of a Reference</h3>
+<p>The first part of the reference denotes what type of document the reference is, in this case it is a website, hence @online but it could be something else like @book or @article <br> 
+The document type determines the next fields you'll need for a proper reference. This site is en excellent guide to the fields you need to use: <a href="https://www.bibtex.com/e/entry-types/">https://www.bibtex.com/e/entry-types/</a></li>
+</p>
 
 <h2>Adding and Positioning Images</h2>
 
@@ -102,8 +104,52 @@ Each individual reference will look something like this: </p>
 <p>Float tells LaTeX to put your image in the same place it appears in the code. You can also see here there is a width modifier which you can use to resize your image.</p>
 
 <h3>Adding Multiple Images to a Page</h3>
+<p>When you begin a figure enviroment as shown above, you can then add subfigures to that environment to position multiple images on the same page.</p>
+
+<div class="codeblock">
+    
+    \begin{figure} <br> 
+    \centering <br> 
+    \begin{subfigure}[b]{0.3\textwidth} <br> 
+    <tab>
+    \includegraphics[scale=0.2]{image} <br> 
+    <tab>
+    \caption{Text A} <br> 
+    \label{fig:desc}  
+    </tab> <br>
+    \end{subfigure} % <br>
+    \begin{subfigure}[b]{0.3\textwidth} <br> 
+    <tab>
+    \includegraphics[scale=0.2]{image} <br> 
+    \caption{Text B} <br> 
+    \label{fig:desc}
+    </tab> <br>
+    \end{subfigure} % <br> 
+     \\ <br> 
+    \begin{subfigure}[b]{0.3\textwidth} <br> 
+    <tab> 
+    \includegraphics[scale=0.2]{image} <br> 
+    \caption{Text C} <br> 
+    \label{fig:desc} 
+    </tab> <br>
+    \end{subfigure} % <br> 
+    \begin{subfigure}[b]{0.3\textwidth} <br> 
+    <tab> 
+    \includegraphics[scale=0.2]{image} <br> 
+    \caption{Text D} <br> 
+    \label{fig:desc}
+    </tab> <br>
+    \end{subfigure} %
+    </tab> <br> 
+    \end{figure}
+   
+</div>
+
+<p>That \\ tells LaTeX to put the next set of things you're doing on a new line.</p>
+
 
 <h3>Figures Within Figures</h3>
+<p>Figures can be subfigures of one larger figure, each of which having its own subheading. This can be nice for comparing two images with some limited description.</p>
 
 <h2>Adding Code Snippets</h2>
 <p>The \lstset environment lets us write example code </p>
@@ -115,7 +161,10 @@ Each individual reference will look something like this: </p>
     </div> 
 
 <h2>Lists and Sublists</h2>
-<p>Plenty of ways to make lists in LaTeX, and you can nest lists inside of lists.</p>
+<p>Plenty of ways to make lists in LaTeX, and you can nest lists inside of lists. It depends on your document type as to how many you can nest, 
+    but to my knowledge you can always nest thrice.
+
+</p>
 <div class="codeblock">
     \begin {itemize} <br>
         <tab>\begin {itemize}</tab> <br>
