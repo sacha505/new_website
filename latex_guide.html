@@ -76,7 +76,7 @@
 Each individual reference will look something like this: </p>
 
 <div class="codeblock">
-    @online{website,
+    @online{website_reference_1,
         author = "Jane Doe",  <br> 
         title = "My Book",  <br> 
         url  = "https://www.wikipedia.org/",  <br> 
@@ -87,6 +87,12 @@ Each individual reference will look something like this: </p>
 <p>The first part of the reference denotes what type of document the reference is, in this case it is a website, hence @online but it could be something else like @book or @article <br> 
 The document type determines the next fields you'll need for a proper reference. This site is en excellent guide to the fields you need to use: <a href="https://www.bibtex.com/e/entry-types/">https://www.bibtex.com/e/entry-types/</a></li>
 </p>
+
+<p>To use the reference, call it next to the text block you want to cite using the name you assigned in bibtex.</p>
+
+<div class="codeblock">
+   \cite{website_reference_1}
+</div> 
 
 <h2>Adding and Positioning Images</h2>
 
