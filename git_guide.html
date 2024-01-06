@@ -6,14 +6,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<link rel="icon" href="http://example.com/favicon.png">
+<link rel="icon" href="heart.svg">
+<title>Git Notes</title>
 </head>
 <body>
 
     <div class="container">
         <div class="description">
-            <h1>Fixing Git</h1>
-            <h2>(...and Other Useful Notes)</h2>
+            <h1>Git Notes</h1>
             <p>Something I am still learning, I'll keep these notes up to date as a quick reference for what I see as common problems.</p>
         </div>
     </div>
@@ -33,11 +33,81 @@
     <div class="list">   
         <ul>
             <li><a href="git_guide.html">Branches</a></li>
-        
+            <li><a href="git_guide.html">Reverting to a Working Version</a></li>
+            <li><a href="git_guide.html">Handling Merge Conflicts</a></li>
+            <li><a href="git_guide.html">Squash all Local Commits into One</a></li>
+            <li><a href="git_guide.html">Stash and Pop Commits</a></li>
+
     
         </ul> 
     
     </div>
     
+
+<h2>Branching</h2>
+    <p>Make a new branch:</p>
+    <div class="codeblock">
+        git checkout -b "new-branch-name"  <br> 
+    </div>    
+
+    <p>Make a new branch based on a specific upstream:</p>
+    <div class="codeblock">
+        git checkout -b "new-branch-name" "upstream_name"<br> 
+    </div>  
+    <p>Switch branches:</p>
+    <div class="codeblock">
+        git checkout "branch-name" <br> 
+    </div> 
+    <p>Change upstream tracking branch:</p>
+    <div class="codeblock">
+        git checkout "branch-name" --set-upstream-to "new-upstream-name"<br> 
+    </div> 
+
+<h2>Revert to a Working Version</h2>
+
+<p>Revert to a specific commit hash:</p>
+<div class="codeblock">
+    git log -1 <br> 
+</div>    
+<p>Change the number for however many commits back you want to see the hash for, then:</p>
+<div class="codeblock">
+    git reset --hard "commit-hash" <br> 
+</div>  
+
+<p>Hard reset to the tip of the branch:</p>
+<div class="codeblock">
+    git reset --hard <br> 
+</div>   
+
+
+
+<h2>Handling Merge Conflicts</h2>
+<p>Resolve the conflicts as you wish, i.e. with ide or merge tool then run:</p>
+<div class="codeblock">
+    git merge --continue<br> 
+</div>   
+<p>This will ensure you don't accidentally alter the git blame for other people's commits.</p>
+
+
+<h2>Squash all Local Commits into One</h2>
+<p>You can squash lots of commits into a single one with a new message.</p>
+<div class="codeblock">
+    git merge --squash<br> 
+</div>   
+
+
+<h2>Stash and Pop Commits</h2>
+<p>Stash will save your commits and let you pull without pushing first, pop then puts them back as local commits ready for pushing.</p> 
+<div class="codeblock">
+    git stash <br> 
+</div>   
+<div class="codeblock">
+    git stash pop<br> 
+</div>   
+
+<div class="top">
+    <a href="#">Back to Top</a>
+    </div>
+
 </body>
 </html> 

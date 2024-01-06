@@ -28,12 +28,15 @@ h3 {
 p {
     color: white;
     font-family: 'Inconsolata', monospace;
+    white-space: initial;
+    word-break: break-word;
   }
 
 .description {
     margin-left: auto;
     margin-right: auto;
     width: 35em;
+    word-break: break-word;
   }
 
 .description_h2 {
@@ -41,6 +44,7 @@ p {
     margin-right: auto;
     width: 35em;
     padding-top: 50px;
+    word-break: break-word;
 }
 
 .container {
@@ -48,7 +52,11 @@ p {
     justify-content: center;
     height: 10em;
     display: flex;
-    align-items: center 
+    align-items: center; 
+    width: 100%;
+    word-wrap: break-word;
+    white-space: initial;
+    word-break: break-word;
   }
 
 .nav {
@@ -109,7 +117,9 @@ a:active {
     overflow: auto;
     padding: 1em 1.5em;
     display: block;
-    word-wrap: break-word;
+    width: 100%;
+    height: auto;
+    word-break: break-word;
 }
 
 tab {
