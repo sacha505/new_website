@@ -130,6 +130,15 @@ a:active {
   .codeblock{
     width: 65%;
   }
+  .container {
+    width: 65%;
+  }
+  .nav {
+    right: 330px;
+    position: absolute;
+    margin-top: 40px;
+
+  }
 } 
 
 
