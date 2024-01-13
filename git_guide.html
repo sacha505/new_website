@@ -38,36 +38,47 @@
     
 
 <h2>Branching</h2>
+<div class="container2">
     <p>Make a new branch:</p>
+</div>
     <div class="codeblock">
         git checkout -b "new-branch-name"  <br> 
     </div>    
-
+    <div class="container2">
     <p>Make a new branch based on a specific upstream:</p>
+</div>
     <div class="codeblock">
         git checkout -b "new-branch-name" "upstream_name"<br> 
     </div>  
+    <div class="container2">
     <p>Switch branches:</p>
+</div>
     <div class="codeblock">
         git checkout "branch-name" <br> 
     </div> 
+    <div class="container2">
     <p>Change upstream tracking branch:</p>
+</div>
     <div class="codeblock">
         git checkout "branch-name" --set-upstream-to "new-upstream-name"<br> 
     </div> 
 
 <h2>Revert to a Working Version</h2>
-
+<div class="container2">
 <p>Revert to a specific commit hash:</p>
+</div>
 <div class="codeblock">
     git log -1 <br> 
 </div>    
+<div class="container2">
 <p>Change the number for however many commits back you want to see the hash for, then:</p>
+</div>
 <div class="codeblock">
     git reset --hard "commit-hash" <br> 
 </div>  
-
+<div class="container2">
 <p>Hard reset to the tip of the branch:</p>
+</div>
 <div class="codeblock">
     git reset --hard <br> 
 </div>   
@@ -75,22 +86,29 @@
 
 
 <h2>Handling Merge Conflicts</h2>
+<div class="container2">
 <p>Resolve the conflicts as you wish, i.e. with ide or merge tool then run:</p>
+</div>
 <div class="codeblock">
     git merge --continue<br> 
 </div>   
+<div class="container2">
 <p>This will ensure you don't accidentally alter the git blame for other people's commits.</p>
-
+</div>
 
 <h2>Squash all Local Commits into One</h2>
+<div class="container2">
 <p>You can squash lots of commits into a single one with a new message.</p>
+</div>
 <div class="codeblock">
     git merge --squash<br> 
 </div>   
 
 
 <h2>Stash and Pop Commits</h2>
+<div class="container2">
 <p>Stash will save your commits and let you pull without pushing first, pop then puts them back as local commits ready for pushing.</p> 
+</div>
 <div class="codeblock">
     git stash <br> 
 </div>   

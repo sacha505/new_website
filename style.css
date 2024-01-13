@@ -38,7 +38,10 @@ p {
     white-space: initial;
     word-break: break-word;
     display: block;
-    
+    word-wrap: break-word;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .description {
@@ -68,6 +71,10 @@ p {
     white-space: initial;
     word-break: break-word;
     overflow-wrap: break-word;
+  }
+
+  .container2 {
+    width: 100%;
   }
 
 .nav {
@@ -170,5 +177,8 @@ tab {
     width: 35em;
     text-align: left;
     padding-bottom: 5em;
+  }
+  .container2 {
+    width: 65%;
   }
 } 
