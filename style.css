@@ -4,12 +4,14 @@ html {
     width:100%; 
     margin:0;
     overflow-x: none;
+    overflow: visible;
  }
 
  body {
     background-color: #1d1c1f;
     overflow: scroll;
     overflow-x: none;
+    overflow: visible;
  }
 
 .home {
@@ -41,7 +43,6 @@ p {
     word-break: break-word;
     display: block;
     word-wrap: break-word;
-    overflow: auto;
     margin-left: auto;
     margin-right: auto;
   }
